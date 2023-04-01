@@ -1,0 +1,40 @@
+{
+    "name": "glaucomorais/laravel-backports",
+    "description": "Using Laravel latest features in older versions.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Glauco Morais",
+            "email": "glaucofmorais@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "illuminate/support": "^8"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6 || ^7 || ^8",
+        "phpunit/phpunit": "^8.5 || ^9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Backports\\": "backports/",
+            "GlaucoMorais\\LaravelBackports\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-r": {
+            "GlaucoMorais\\LaravelBackports\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GlaucoMorais\\LaravelBackports\\BackportServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
